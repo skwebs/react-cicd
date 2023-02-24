@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import img from '../assets/react.svg'
 import { ConstantWideLayout, PageLayout } from './index'
 
@@ -22,10 +22,10 @@ const Navbar = ({ className = "" }) => {
         <>
             <nav className={`${className} bg-white  py-2.5 dark:bg-gray-900 w-full border-b border-gray-200 dark:border-gray-600`}>
                 <ConstantWideLayout className="min-w-[300px] px-2 flex flex-wrap items-center justify-between">
-                    <a href="https://flowbite.com/" className="flex items-center">
-                        <img src={img} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                    </a>
+                    <Link to="/" className="flex items-center">
+                        <img src={img} className="h-6 mr-3 sm:h-9" alt="App Logo" />
+                        <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">React App</span>
+                    </Link>
                     <div className="flex md:order-2">
                         <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
                         <button onClick={() => toggleNavbar()} data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
