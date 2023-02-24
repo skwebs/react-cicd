@@ -11,10 +11,10 @@ import router from './Router';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-      {/* <BrowserRouter>
+      <BrowserRouter basename='/react-cicd'>
         <App />
-      </BrowserRouter> */}
-      <RouterProvider router={router} />
+      </BrowserRouter>
+      {/* <RouterProvider router={router} /> */}
     </ApolloProvider>
   </React.StrictMode>,
 )
